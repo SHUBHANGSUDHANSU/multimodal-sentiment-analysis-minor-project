@@ -1,14 +1,14 @@
 # Multimodal Sentiment Analysis Using Text, Audio, and Video
 
-This repository contains a beginner-friendly Jupyter Notebook for a B.Tech minor project on **Multimodal Sentiment Analysis**.
+I have built a **Multimodal Sentiment Analysis** project that predicts a person's sentiment by using text, audio, and video information together.
 
-The project predicts sentiment by combining information from three modalities:
+The system is designed to classify sentiment by combining three modalities:
 
 - **Text**: what the person says.
 - **Audio**: how the person says it, such as tone and speech pattern.
 - **Video**: visual cues such as face, movement, and expressions.
 
-The main idea is that human sentiment is not always clear from text alone. A sentence like "I am fine" can sound positive, negative, or sarcastic depending on voice tone and facial expression. Multimodal sentiment analysis tries to understand sentiment more accurately by using text, audio, and video together.
+The main idea behind this project is that human sentiment is not always clear from text alone. The same sentence can express different emotions depending on the speaker's tone and facial expression. By using text, audio, and video together, the model can understand sentiment in a more complete way.
 
 ## Project Objective
 
