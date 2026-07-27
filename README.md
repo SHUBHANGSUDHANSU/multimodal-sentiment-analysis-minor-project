@@ -458,12 +458,6 @@ The project can be improved by:
 - Adding face detection before video feature extraction.
 - Deploying the model using Streamlit or FastAPI.
 
-## Interview Explanation
-
-Here is a simple way to explain the project in an interview:
-
-> My project is a multimodal sentiment analysis system. It predicts whether an input is positive, negative, or neutral by using text, audio, and video information. I used the MELD raw dataset, where each utterance has text, labels, and a matching video clip. I extracted TF-IDF features from text, MFCC features from audio, and frame-level features from video. Then I combined these features using early fusion and trained a dense neural network classifier. The model was evaluated using accuracy, precision, recall, F1-score, and a confusion matrix.
-
 ## Honest Answer If Asked About Audio and Video
 
 If asked whether the project really supports audio and video, answer:
@@ -473,16 +467,6 @@ If asked whether the project really supports audio and video, answer:
 If asked why the MELD dataset is not uploaded to GitHub, answer:
 
 > MELD raw data is very large, so it is not uploaded to GitHub. The GitHub repository contains the complete code and setup instructions, while the dataset is downloaded separately from Kaggle or the official MELD source.
-
-## Resume Description
-
-**Multimodal Sentiment Analysis Using Text, Audio, and Video**
-
-Built a sentiment classification system to predict positive, negative, and neutral sentiment using text, audio, and video inputs.
-
-Implemented text preprocessing, TF-IDF, MFCC audio features, OpenCV video features, early fusion, neural network training, and model evaluation.
-
-**Tech Used:** Python, Jupyter Notebook, Pandas, NumPy, Scikit-learn, TensorFlow/Keras, Librosa, OpenCV.
 
 ## Repository Files
 
