@@ -2,7 +2,9 @@
 
 This repository contains a beginner-friendly Jupyter Notebook for a B.Tech minor project on multimodal sentiment analysis.
 
-The notebook trains a sentiment classifier using the included `LabeledText.xlsx` dataset. The dataset contains text captions and labels:
+The notebook supports the MELD raw dataset for text, audio, and video analysis. If MELD is not available locally, it falls back to the included `LabeledText.xlsx` text dataset.
+
+For MELD, the target sentiment labels are:
 
 - `negative`
 - `neutral`
@@ -10,21 +12,36 @@ The notebook trains a sentiment classifier using the included `LabeledText.xlsx`
 
 ## Project Pipeline
 
-1. Load the Excel dataset.
-2. Clean and preprocess text captions.
-3. Extract text features using TF-IDF.
-4. Include audio MFCC and video frame-feature extraction functions.
-5. Use zero-vector fallback for missing audio/video files.
-6. Fuse text, audio, and video feature vectors.
-7. Train a dense neural network classifier.
-8. Evaluate using accuracy, precision, recall, F1-score, and confusion matrix.
-9. Predict sentiment for new samples.
+1. Load MELD train/dev/test CSV files.
+2. Map each utterance to its `.mp4` clip.
+3. Clean and preprocess text utterances.
+4. Extract text features using TF-IDF.
+5. Extract audio features using MFCC with `librosa`.
+6. Extract video frame features using OpenCV.
+7. Fuse text, audio, and video feature vectors.
+8. Train a dense neural network classifier.
+9. Evaluate using accuracy, precision, recall, F1-score, and confusion matrix.
+10. Predict sentiment for new samples.
 
 ## Files
 
 - `Multimodal_Sentiment_Analysis_Using_Text_Audio_Video.ipynb`: Complete project notebook.
 - `LabeledText.xlsx`: Dataset used by the notebook.
+- `requirements.txt`: Python dependencies for full audio/video feature extraction.
 
-## Note
+## MELD Folder Setup
 
-The included dataset is text-only, so the current model mainly learns from caption text. The notebook still includes audio and video feature extraction code so the project can be extended with real media files later.
+Keep the raw MELD folder locally like this:
+
+```text
+MELD-RAW/
+  MELD.Raw/
+    train/train_sent_emo.csv
+    dev_sent_emo.csv
+    test_sent_emo.csv
+    train/train_splits/
+    dev/dev_splits_complete/
+    test/output_repeated_splits_test/
+```
+
+The `MELD-RAW/` folder is ignored by Git because it is too large to upload to GitHub.

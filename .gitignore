@@ -7,3 +7,5 @@ venv/
 env/
 outputs/
 *.log
+MELD-RAW/
+.feature_cache/
